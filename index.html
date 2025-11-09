@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranking de Contas FF — Entrar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="page-header">
+        <div>
+          <h1 class="page-title">Ranking de Contas FF</h1>
+          <p class="page-subtitle">
+            Entre diariamente no minigame, marque pontos e dispute uma conta lendária de Free Fire.
+          </p>
+        </div>
+      </header>
+      <section class="form-grid">
+        <article class="card form-card">
+          <div>
+            <h2 class="page-title" style="font-size: 26px">Login</h2>
+            <p class="page-subtitle">Já possui cadastro? Entre para continuar acumulando pontos.</p>
+          </div>
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="loginEmail">E-mail</label>
+              <input class="input" type="email" id="loginEmail" name="email" placeholder="seu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Senha</label>
+              <input class="input" type="password" id="loginPassword" name="password" placeholder="••••••" required />
+            </div>
+            <div class="form-feedback"></div>
+            <button class="button" type="submit">Entrar</button>
+          </form>
+          <p class="helper-text">Esqueceu a senha? Em breve ofereceremos recuperação automática.</p>
+        </article>
+        <article class="card form-card">
+          <div>
+            <h2 class="page-title" style="font-size: 26px">Criar Conta</h2>
+            <p class="page-subtitle">Cadastre-se para disputar os prêmios diários com a comunidade.</p>
+          </div>
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="registerUsername">Nome de usuário</label>
+              <input
+                class="input"
+                type="text"
+                id="registerUsername"
+                name="username"
+                placeholder="Seu nick de batalha"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="registerEmail">E-mail</label>
+              <input class="input" type="email" id="registerEmail" name="email" placeholder="voce@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="registerPassword">Senha</label>
+              <input
+                class="input"
+                type="password"
+                id="registerPassword"
+                name="password"
+                placeholder="Mínimo 6 caracteres"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="registerConfirm">Confirmar senha</label>
+              <input
+                class="input"
+                type="password"
+                id="registerConfirm"
+                name="confirm"
+                placeholder="Repita sua senha"
+                required
+              />
+            </div>
+            <div class="form-feedback" id="registerFeedback"></div>
+            <button class="button button-secondary" type="submit">Cadastrar e Começar</button>
+          </form>
+          <p class="helper-text">
+            Ao criar sua conta, você concorda com os termos do ranking e o reset diário às 23h59.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">Ranking de Contas FF — Powered by comunidade Free Fire.</footer>
+    <script type="module" src="assets/js/auth.js"></script>
+  </body>
+</html>

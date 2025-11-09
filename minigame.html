@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranking de Contas FF — Minigame</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div data-slot="navbar"></div>
+    <main>
+      <header class="page-header">
+        <div>
+          <h1 class="page-title">Caça às Caixas</h1>
+          <p class="page-subtitle">
+            Clique nas caixas de drop o mais rápido que puder. Cada acerto em sequência aumenta o combo e a pontuação.
+          </p>
+        </div>
+        <div class="glass">
+          <span class="stat-title">Dica</span>
+          <span class="helper-text">
+            Movimente o mouse continuamente – o alvo reposiciona a cada segundo e meio.
+          </span>
+        </div>
+      </header>
+
+      <section class="grid two">
+        <article class="card sm">
+          <h2 class="page-title" style="font-size: 24px; margin-bottom: 12px">Painel da partida</h2>
+          <div class="grid">
+            <div class="stat-card">
+              <span class="stat-title">Pontuação atual</span>
+              <span class="stat-value" id="gameScore">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-title">Combo</span>
+              <span class="stat-value" id="gameCombo">0x</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-title">Tempo restante</span>
+              <span class="stat-value" id="gameTimer">30s</span>
+            </div>
+          </div>
+          <div class="glass" style="margin-top: 16px">
+            <span class="badge">Objetivo</span>
+            <p class="helper-text">
+              Finalize a partida com pelo menos 1.500 pontos para garantir sua vaga entre os finalistas.
+            </p>
+          </div>
+        </article>
+        <article class="card sm">
+          <div class="game-container" id="gameArena">
+            <div class="game-hud">
+              <span>Pontos: <strong id="gameScoreHud">0</strong></span>
+              <span>Combo: <strong id="gameComboHud">0x</strong></span>
+              <span>Tempo: <strong id="gameTimerHud">30s</strong></span>
+            </div>
+            <div class="game-overlay" id="gameOverlay"></div>
+            <div class="game-target hidden" id="gameTarget">+</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="card sm" style="margin-top: 32px">
+        <h3 class="page-title" style="font-size: 22px; margin-bottom: 12px">Como funciona</h3>
+        <div class="grid three">
+          <div class="glass">
+            <span class="badge">Passo 1</span>
+            <p class="page-subtitle">Clique em começar e procure as caixas de drop dentro da arena.</p>
+          </div>
+          <div class="glass">
+            <span class="badge">Passo 2</span>
+            <p class="page-subtitle">Acertos consecutivos aumentam seu combo — mantenha a sequência!</p>
+          </div>
+          <div class="glass">
+            <span class="badge">Passo 3</span>
+            <p class="page-subtitle">Finalize a partida para enviar os pontos direto ao ranking diário.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">Boa sorte! Cada partida pode ser a diferença para ganhar uma nova conta.</footer>
+    <script type="module" src="assets/js/minigame.js"></script>
+  </body>
+</html>

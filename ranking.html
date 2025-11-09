@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranking de Contas FF — Ranking Diário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div data-slot="navbar"></div>
+    <main>
+      <header class="page-header">
+        <div>
+          <h1 class="page-title">Ranking Diário</h1>
+          <p class="page-subtitle">
+            Os 10 primeiros levam contas especiais toda noite às 23h59. Mantenha seu nome no topo!
+          </p>
+        </div>
+        <div class="glass">
+          <span class="stat-title">Tempo para o reset</span>
+          <span class="stat-value" style="font-size: 26px" id="resetCountdown">00:00:00</span>
+        </div>
+      </header>
+
+      <section class="card">
+        <div class="page-header" style="margin-bottom: 16px">
+          <div>
+            <h2 class="page-title" style="font-size: 26px">Quadro de líderes</h2>
+            <p class="helper-text">Seu rank atual: <strong id="yourRank">-</strong></p>
+          </div>
+          <div class="tabs">
+            <button class="tab active" data-filter="top">Top 10</button>
+            <button class="tab" data-filter="all">Todos</button>
+          </div>
+        </div>
+        <div class="glass" style="margin-bottom: 16px">
+          <span class="stat-title">Jogadores ativos hoje</span>
+          <span class="stat-value" style="font-size: 24px" id="totalPlayers">0</span>
+        </div>
+        <div class="table-responsive">
+          <table class="leaderboard">
+            <thead>
+              <tr>
+                <th>Posição</th>
+                <th>Jogador</th>
+                <th>Pontos</th>
+                <th>Partidas</th>
+                <th>Combo Máximo</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboardBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">Continue jogando para garantir sua vaga no top 10!</footer>
+    <script type="module" src="assets/js/ranking.js"></script>
+  </body>
+</html>

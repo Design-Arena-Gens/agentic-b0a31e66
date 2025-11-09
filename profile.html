@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranking de Contas FF — Perfil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div data-slot="navbar"></div>
+    <main>
+      <header class="page-header">
+        <div>
+          <h1 class="page-title">Seu Quartel General</h1>
+          <p class="page-subtitle">
+            Revise seus resultados diários, acompanhe a corrida no ranking e entre pronto na próxima partida.
+          </p>
+        </div>
+        <div class="timeline">
+          <span class="time">RESET 23:59</span>
+          <span class="label">Top 10 leva conta de Free Fire premium</span>
+        </div>
+      </header>
+
+      <section class="card profile-card">
+        <div class="avatar" id="profileAvatar">FF</div>
+        <div>
+          <h2 class="page-title" style="font-size: 28px; margin-bottom: 8px" data-field="username">Jogador</h2>
+          <p class="helper-text" data-field="email">email@exemplo.com</p>
+          <div class="grid two" style="margin-top: 16px">
+            <div class="stat-card">
+              <span class="stat-title">Pontuação atual</span>
+              <span class="stat-value" data-field="points">0</span>
+              <span class="helper-text">
+                Falta <strong data-field="points-to-top">0</strong> para alcançar a primeira posição.
+              </span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-title">Posição diária</span>
+              <span class="stat-value" data-field="ranking-position">#-</span>
+              <span class="helper-text">Atualizado <span data-field="last-update">agora</span>.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid two" style="margin-top: 32px">
+        <article class="card sm">
+          <h3 class="page-title" style="font-size: 22px; margin-bottom: 12px">Resumo de batalha</h3>
+          <div class="grid three">
+            <div class="stat-card">
+              <span class="stat-title">Pontos acumulados</span>
+              <span class="stat-value" data-field="total-earned">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-title">Partidas jogadas</span>
+              <span class="stat-value" data-field="sessions">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-title">Combo máximo</span>
+              <span class="stat-value" data-field="best-combo">0</span>
+            </div>
+          </div>
+          <div style="margin-top: 24px">
+            <div class="stat-title" style="margin-bottom: 8px">Meta diária</div>
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar"></div>
+            </div>
+            <p class="helper-text" data-field="progress-label" style="margin-top: 8px">
+              Complete partidas no minigame para alcançar sua meta de 1.500 pontos.
+            </p>
+          </div>
+        </article>
+
+        <article class="card sm">
+          <h3 class="page-title" style="font-size: 22px; margin-bottom: 12px">Customize seu avatar</h3>
+          <p class="helper-text">
+            Escolha a energia que representa seu estilo. Ela aparece no topo do ranking para toda a comunidade.
+          </p>
+          <form id="avatarForm" style="margin-top: 16px">
+            <div class="grid two">
+              <label class="glass">
+                <input type="radio" name="avatar" value="phoenix" style="margin-right: 8px" />
+                Phoenix — agressivo e incansável.
+              </label>
+              <label class="glass">
+                <input type="radio" name="avatar" value="blaze" style="margin-right: 8px" />
+                Blaze — especialista em rush.
+              </label>
+              <label class="glass">
+                <input type="radio" name="avatar" value="sparks" style="margin-right: 8px" />
+                Sparks — mira cirúrgica.
+              </label>
+              <label class="glass">
+                <input type="radio" name="avatar" value="frost" style="margin-right: 8px" />
+                Frost — mente fria nas decisões.
+              </label>
+            </div>
+            <div id="avatarFeedback" style="margin-top: 16px"></div>
+            <button class="button button-secondary" type="submit" style="margin-top: 12px">Salvar estilo</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="card sm" style="margin-top: 32px">
+        <h3 class="page-title" style="font-size: 22px; margin-bottom: 12px">Missões do dia</h3>
+        <div class="grid three">
+          <div class="glass">
+            <span class="badge">+150 pts</span>
+            <p class="page-subtitle">Acabe uma partida com combo 5x ou maior.</p>
+          </div>
+          <div class="glass">
+            <span class="badge">+250 pts</span>
+            <p class="page-subtitle">Bata sua meta diária antes das 20h.</p>
+          </div>
+          <div class="glass">
+            <span class="badge">+400 pts</span>
+            <p class="page-subtitle">Fique no top 3 por 2 horas consecutivas.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">Prepare-se, as contas lendárias aguardam os verdadeiros MVPs!</footer>
+    <script type="module" src="assets/js/profile.js"></script>
+  </body>
+</html>
